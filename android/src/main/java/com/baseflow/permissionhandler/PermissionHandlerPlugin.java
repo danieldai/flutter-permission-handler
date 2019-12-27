@@ -45,24 +45,12 @@ public class PermissionHandlerPlugin implements MethodCallHandler {
   private static final int PERMISSION_CODE_IGNORE_BATTERY_OPTIMIZATIONS = 5672353;
 
   //PERMISSION_GROUP
-  private static final int PERMISSION_GROUP_CALENDAR = 0;
-  private static final int PERMISSION_GROUP_CAMERA = 1;
-  private static final int PERMISSION_GROUP_CONTACTS = 2;
-  private static final int PERMISSION_GROUP_LOCATION = 3;
-  private static final int PERMISSION_GROUP_LOCATION_ALWAYS = 4;
-  private static final int PERMISSION_GROUP_LOCATION_WHEN_IN_USE = 5;
-  private static final int PERMISSION_GROUP_MEDIA_LIBRARY = 6;
-  private static final int PERMISSION_GROUP_MICROPHONE = 7;
-  private static final int PERMISSION_GROUP_PHONE = 8;
-  private static final int PERMISSION_GROUP_PHOTOS = 9;
-  private static final int PERMISSION_GROUP_REMINDERS = 10;
-  private static final int PERMISSION_GROUP_SENSORS = 11;
-  private static final int PERMISSION_GROUP_SMS = 12;
-  private static final int PERMISSION_GROUP_SPEECH = 13;
-  private static final int PERMISSION_GROUP_STORAGE = 14;
-  private static final int PERMISSION_GROUP_IGNORE_BATTERY_OPTIMIZATIONS = 15;
-  private static final int PERMISSION_GROUP_NOTIFICATION = 16;
-  private static final int PERMISSION_GROUP_UNKNOWN = 17;
+  private static final int PERMISSION_GROUP_LOCATION = 0;
+  private static final int PERMISSION_GROUP_LOCATION_ALWAYS = 1;
+  private static final int PERMISSION_GROUP_LOCATION_WHEN_IN_USE = 2;
+  private static final int PERMISSION_GROUP_PHONE = 3;
+  private static final int PERMISSION_GROUP_STORAGE = 4;
+  private static final int PERMISSION_GROUP_UNKNOWN = 5;
 
   private PermissionHandlerPlugin(Registrar mRegistrar) {
     this.mRegistrar = mRegistrar;
@@ -70,23 +58,11 @@ public class PermissionHandlerPlugin implements MethodCallHandler {
 
   @Retention(RetentionPolicy.SOURCE)
   @IntDef({
-      PERMISSION_GROUP_CALENDAR,
-      PERMISSION_GROUP_CAMERA,
-      PERMISSION_GROUP_CONTACTS,
       PERMISSION_GROUP_LOCATION,
       PERMISSION_GROUP_LOCATION_ALWAYS,
       PERMISSION_GROUP_LOCATION_WHEN_IN_USE,
-      PERMISSION_GROUP_MEDIA_LIBRARY,
-      PERMISSION_GROUP_MICROPHONE,
       PERMISSION_GROUP_PHONE,
-      PERMISSION_GROUP_PHOTOS,
-      PERMISSION_GROUP_REMINDERS,
-      PERMISSION_GROUP_SENSORS,
-      PERMISSION_GROUP_SMS,
-      PERMISSION_GROUP_SPEECH,
       PERMISSION_GROUP_STORAGE,
-      PERMISSION_GROUP_IGNORE_BATTERY_OPTIMIZATIONS,
-      PERMISSION_GROUP_NOTIFICATION,
       PERMISSION_GROUP_UNKNOWN,
   })
   private @interface PermissionGroup {
